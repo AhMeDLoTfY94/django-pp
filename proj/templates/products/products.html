@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content%}
+{% for x in obj %}
+<h1>name = {{ x.name }}</h1>
+<h1>price = {{ x.price }}</h1>
+<h1>category = {{ x.category }}</h1>
+{% endfor %}
+{% endblock  %}
