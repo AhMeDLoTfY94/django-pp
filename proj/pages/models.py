@@ -1,4 +1,6 @@
+from django import forms
 from django.db import models
+from django.forms import widgets
 
 class Female(models.Model):
           female_name=models.CharField(max_length=100,null=True)
@@ -36,7 +38,14 @@ class User_Name(models.Model):
           watch=models.ManyToManyField(Video,null=True)
           def __str__(self):
                     return self.name
+          
+          
+class Login(models.Model):
+          username=models.CharField(max_length=50)
+          password=models.CharField(max_length=50)
 
-
+          def __str__(self):
+                    return self.username
+          
 
 

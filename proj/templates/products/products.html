@@ -1,9 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content%}
 {% for x in obj %}
-<h1>name = {{ x.name }}</h1>
-<h1>price = {{ x.price }}</h1>
-<h1>category = {{ x.category }}</h1>
+{{x.namem}}
+{% if x.image %}
+     <img src="{{x.image.url}}">
+{% else %}
+     <img src="{% static 'images/55.jpg' %}">
+{% endif %}
+
 {% endfor %}
 {% endblock  %}
